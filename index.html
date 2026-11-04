@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حملة شبر أخضر — كل شبر بيفرق</title>
+  <meta name="description" content="حملة شبر أخضر: الإعلان المصور، بوستات السوشيال ميديا، أسس التربية السليمة للنباتات، ومقالات الحملة." />
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="حملة شبر أخضر — الصفحة الرئيسية">
+        <img src="assets/logo/logo.png" alt="" width="64" height="50" />
+        <span class="nav__brand-text">
+          <strong>حملة شبر أخضر</strong>
+          <small>كل شبر بيفرق</small>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="أقسام الموقع">
+        <a href="#ad">الإعلان المصور</a>
+        <a href="#posts">البوستات</a>
+        <a href="#care">أسس التربية السليمة</a>
+        <a href="#articles">المقالات</a>
+      </nav>
+
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO: cinematic full-bleed video stage -->
+    <section class="hero" id="ad" aria-labelledby="hero-title">
+      <div class="hero__stage" id="video-card">
+        <video id="ad-video" preload="none" playsinline controlslist="nodownload"></video>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <button class="hero__play" id="video-play" aria-label="تشغيل الإعلان المصور">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          <span>شغّل الإعلان</span>
+        </button>
+        <div class="hero__badge-row">
+          <span class="pill pill--yellow">الإعلان المصور</span>
+          <span class="pill pill--ghost" id="video-duration"></span>
+        </div>
+      </div>
+
+      <div class="hero__panel reveal">
+        <img class="hero__logo" src="assets/logo/logo.png" alt="لوجو حملة شبر أخضر" width="180" height="140" />
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> حملة توعوية بيئية</p>
+        <h1 id="hero-title">كل <mark>شبر</mark> بيفرق</h1>
+        <p class="hero__desc" id="hero-desc"></p>
+        <div class="hero__actions">
+          <a href="#posts" class="btn btn--primary">شوف شغلنا</a>
+          <a href="#care" class="btn btn--ghost">ابدأ تزرع</a>
+        </div>
+        <p class="hero__note" id="video-note"></p>
+      </div>
+    </section>
+
+    <!-- STATS: dark ribbon / ticker (not cards) -->
+    <section class="ribbon" aria-label="أرقام الحملة">
+      <div class="ribbon__track" id="stats-grid"></div>
+      <p class="ribbon__source">المصدر: ملف حملة شبر أخضر — أرقام الجهاز المركزي للتعبئة العامة والإحصاء.</p>
+    </section>
+
+    <!-- 2. POSTS: phone mockup + stacked feed -->
+    <section class="feed" id="posts" aria-labelledby="posts-title">
+      <div class="container feed__layout">
+        <aside class="feed__intro reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> القسم الثاني</p>
+          <h2 id="posts-title">البوستات</h2>
+          <p class="section__lead">آخر اللي نشره تيم السوشيال ميديا على منصات الحملة.</p>
+          <div class="filters filters--stack" id="post-filters" role="group" aria-label="فلترة البوستات حسب المنصة"></div>
+          <div class="phone" aria-hidden="true">
+            <div class="phone__notch"></div>
+            <div class="phone__screen" id="phone-preview"></div>
+          </div>
+        </aside>
+        <div class="feed__list" id="posts-grid"></div>
+      </div>
+    </section>
+
+    <!-- 3a. CARE: vertical numbered timeline -->
+    <section class="timeline" id="care" aria-labelledby="care-title">
+      <div class="container">
+        <div class="timeline__head reveal">
+          <p class="eyebrow eyebrow--on-dark"><span class="dot" aria-hidden="true"></span> القسم الثالث</p>
+          <h2 id="care-title">أسس التربية السليمة</h2>
+          <p class="section__lead section__lead--on-dark">خمس قواعد بسيطة لو مشيت عليها، أي زرعة هتعيش معاك.</p>
+        </div>
+        <ol class="timeline__list" id="basics-grid"></ol>
+      </div>
+    </section>
+
+    <!-- 3b. PLANTS: horizontal scroll showcase -->
+    <section class="plants" aria-labelledby="plants-title">
+      <div class="container plants__head reveal">
+        <div>
+          <h3 id="plants-title">زرع بيتجاب في البيت</h3>
+          <p class="section__lead">نباتات سهلة تبدأ بيها، ومواصفات كل واحدة عشان تختار المناسب لمكانك. اسحب يمين وشمال.</p>
+        </div>
+        <div class="plants__nav">
+          <button type="button" class="plants__btn" id="plants-prev" aria-label="السابق">→</button>
+          <button type="button" class="plants__btn" id="plants-next" aria-label="التالي">←</button>
+        </div>
+      </div>
+      <div class="plants__rail" id="plants-grid" tabindex="0" aria-labelledby="plants-title"></div>
+    </section>
+
+    <!-- 4. ARTICLES: editorial magazine -->
+    <section class="magazine" id="articles" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="magazine__head reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> القسم الرابع</p>
+          <h2 id="articles-title">المقالات</h2>
+          <p class="section__lead">قراءات عن الحملة، البيئة، وتربية النباتات في البيت.</p>
+        </div>
+        <div class="magazine__grid" id="articles-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo/logo-white.png" alt="لوجو حملة شبر أخضر" width="180" height="140" />
+        <p id="footer-desc"></p>
+      </div>
+      <div class="footer__goals">
+        <h4>أهداف الحملة</h4>
+        <ol id="footer-goals"></ol>
+      </div>
+      <div class="footer__social">
+        <h4>تابعنا</h4>
+        <ul id="footer-social"></ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> حملة شبر أخضر — كل شبر بيفرق</span>
+      <a href="#top" class="footer__top">العودة لأعلى ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
