@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F5D3A"/><stop offset="1" stop-color="#4F8F2A"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Tahoma, Arial" font-size="54" font-weight="700" fill="#fff">صورة المقال</text>
+</svg>
